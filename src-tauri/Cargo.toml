@@ -1,0 +1,21 @@
+[package]
+name = "rimrust"
+version = "0.0.1"
+description = ""
+authors = ["Matt J. Stevenson"]
+edition = "2021"
+
+[build-dependencies]
+tauri-build = { version = "1", features = [] }
+
+[dependencies]
+futures = "0.3.30"
+home = "0.5.9"
+tauri = { version = "1", features = ["shell-all", "dialog-open"] }
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+which = "4.3.0"
+
+[features]
+custom-protocol = ["tauri/custom-protocol"]
